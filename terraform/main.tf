@@ -27,12 +27,7 @@ resource "azurerm_service_plan" "sp1" {
   location            = var.location
   resource_group_name = data.azurerm_resource_group.wsdevops.name
   os_type             = "Linux"
-#  reserved            = true
   sku_name            = "P1v2"
-#  sku {
-#    tier = "Standard"
-#    size = "S1"
-#  }
 }
 
 resource "azurerm_app_service" "website" {
