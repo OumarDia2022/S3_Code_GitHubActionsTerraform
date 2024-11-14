@@ -35,10 +35,6 @@ resource "azurerm_linux_web_app" "website" {
   location            = var.location
   resource_group_name = data.azurerm_resource_group.wsdevops.name
   service_plan_id     = azurerm_service_plan.sp1.id
-  site_config {
-    linux_fx_version = "NODE|22-lts"
-    #scm_type         = "LocalGit"
-  }
 }
 resource "azurerm_log_analytics_workspace" "log" {
   name                = "odia24-lg-analytics"
