@@ -37,7 +37,7 @@ resource "azurerm_linux_web_app" "website" {
   service_plan_id     = azurerm_service_plan.sp1.id
   site_config {
     linux_fx_version = "NODE|22-lts"
-    scm_type         = "LocalGit"
+    #scm_type         = "LocalGit"
   }
 }
 resource "azurerm_log_analytics_workspace" "log" {
