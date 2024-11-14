@@ -26,13 +26,13 @@ resource "azurerm_service_plan" "sp1" {
   name                = var.app_service_plan_name
   location            = var.location
   resource_group_name = data.azurerm_resource_group.wsdevops.name
-  kind                = "Linux"
-  reserved            = true
-
-  sku {
-    tier = "Standard"
-    size = "S1"
-  }
+  os_type             = "Linux"
+#  reserved            = true
+  sku_name            = "P1v2"
+#  sku {
+#    tier = "Standard"
+#    size = "S1"
+#  }
 }
 
 resource "azurerm_app_service" "website" {
